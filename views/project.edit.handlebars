@@ -1,0 +1,285 @@
+<!-- views/project.edit.handebars -->
+
+{{#section 'head'}}
+    <!-- added by project.edit.handlebars -->
+
+    <script type="application/javascript">
+        jQuery(document).ready(function($) {
+            $("main").off('click', '#del-project-btn').on('click', '#del-project-btn', function() {
+                    bootbox.confirm({
+                        size: "small",
+                        message: "Do you want to delete this project?",
+                        buttons: {
+                            confirm: {
+                                label: 'Delete',
+                                className: 'btn-danger'
+                            },
+                            cancel: {
+                                label: 'Cancel',
+                                className: 'btn-default'
+                            }
+                        },
+                        callback: function(confirmed){
+                            if (confirmed) {
+                                fetch('/ajax/projects/{{project._id}}', {
+                                    method: 'delete',
+                                }).then(function(response) {
+                                    window.location.replace("/projects");
+                                });
+                            }
+                        }
+                    });
+            });
+        });
+
+        function modalGetPeopleTable(modal) {
+            var modalBody = modal.find(".modal-body");
+            var modalTitle = modal.find(".modal-title");
+            modalBody.empty();
+
+            fetch('/ajax/people', {
+                method: 'get'
+            }).then(function(response) {
+                return response.json();
+            }).then(function(json) {
+                //get all people not already assigned to project
+                json = json.filter(function (obj) { return ($('#peopleTable').find('*[data-objectid="'+obj._id+'"]').length == 0); });
+
+                modalTitle.html("Lägg till personer");
+                modalBody.html(Handlebars.templates['project.modal.people'](json));
+
+                modalBody.off('change','input').on('change','input', function() {
+                    if (modalBody.find('input:checked').length) {
+                        modal.find(".btn-success").prop('disabled',false);
+                    } else {
+                        modal.find(".btn-success").prop('disabled',true);
+                    }
+                });
+
+                modal.off('click', ".btn-success").on('click', ".btn-success",function() {
+                    var reqbody = [];
+                    $("#modalContentTable").find("input:checked").each(function() {
+                        var assignment = {};
+                        assignment.person = $(this).data("objectid");
+                        assignment.role = "";
+                        assignment.start = helpers.getDateString(new Date);
+                        assignment.end = "";
+                        reqbody.push(assignment);
+                    });
+                    if (reqbody.length > 0) {
+                        fetch('/ajax/projects/{{project._id}}/people', {
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-Type': 'application/json'
+                            },
+                            method: 'post',
+                            body: JSON.stringify(reqbody)
+                        }).then(function(response) {
+                            if (response.status == 404) {
+                                setActionAlert("#notificationAlert","alert-danger", "You have to save the project before you can add people!");
+                            }
+                            return response.json();
+                        }).then(function(json) {
+                            populatePeopleTable(json);
+                        });
+                    }
+                });
+
+            }).catch(function(err) {
+                // Error :(
+            });
+        }
+
+        function getPersonDetails(target, row) {
+            var data = $(row).data("object");
+
+            $(target).html(Handlebars.templates['project.person.assignment'](data));
+
+            $(target).off('click', ".btn-info").on('click', ".btn-info",function() {
+                fetch('/ajax/projects/{{project._id}}/people', {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+                    },
+                    method: 'post',
+                    body: $(target).closest("form").serialize()
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(json) {
+                    populatePeopleTable(json);
+                    $('#peopleTable').find('tr[data-objectid="'+data.person._id+'"]').addClass("active");
+
+                });
+            });
+
+            $(target).off('click', ".btn-danger").on('click', ".btn-danger",function() {
+                bootbox.confirm({
+                    size: "small",
+                    message: "Do you want to remove <b>"+data.person.firstname+" "+data.person.lastname+"</b> from this project?",
+                    buttons: {
+                        confirm: {
+                            label: 'Remove',
+                            className: 'btn-danger'
+                        },
+                        cancel: {
+                            label: 'Cancel',
+                            className: 'btn-default'
+                        }
+                    },
+                    callback: function(confirmed){
+                        if (confirmed) {
+                            fetch('/ajax/projects/{{project._id}}/people/'+data.person._id, {
+                                method: 'delete',
+                            }).then(function(response) {
+                                return response.json();
+                            }).then(function(json) {
+                                populatePeopleTable(json);
+                                $("#personDetails").html("");
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+        function populatePeopleTable(json) {
+            $("#peopleTable").html(Handlebars.templates['project.person.listing'](json.people));
+        }
+    </script>
+{{/section}}
+
+{{#if project.name}}
+    <h3>{{project.name}}</h3>
+{{else}}
+    <h3>New Project</h3>
+{{/if}}
+<hr>
+
+<!-- Alert is used to display relevant feedback to user actions -->
+{{> alert notification}}
+
+<!-- Form for editing project information -->
+<form class="form-vertical" action="/projects/{{project._id}}" method="POST">
+    <fieldset {{#unless editable}} disabled {{/unless}}>
+    <div class="form-group">
+        <button type="button" id="del-project-btn" class="btn btn-sm btn-danger btn-hideable pull-right" >Ta bort Projekt</button>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Projekt information</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="control-label" for="name">Projektnamn:</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Projektnamn" required value="{{project.name}}">
+
+                <label class="control-label" for="aonumber">AO Nummer:</label>
+                <input type="text" class="form-control" name="ao_number" id="aonumber" placeholder="AO Nummer" required value="{{project.ao_number}}">
+
+                <label class="control-label" for="start">Startdatum:</label>
+                <input type="date" class="form-control" name="start" id="start" placeholder="Startdatum" value="{{project.start}}">
+
+                <label class="control-label" for="end">Slutdatum:</label>
+                <input type="date" class="form-control" name="end" id="end" placeholder="Slutdatum" value="{{project.end}}">
+
+                <label class="control-label" for="esthours">Uppskattat Antal Timmar:</label>
+                <input type="text" class="form-control" name="estimated_hours" id="esthours" placeholder="Timmar" value="{{project.estimated_hours}}">
+
+            </div>
+            <div class="col-md-6">
+                <label class="control-label" for="status">Projektstatus:</label>
+                <input type="text" class="form-control" name="status" id="status" placeholder="Status" value="{{project.status}}">
+
+                <label class="control-label" for="street">Gatuadress:</label>
+                <input type="text" class="form-control" name="address[street]" id="street" placeholder="Gatuadress" value="{{project.address.street}}">
+
+                <label class="control-label" for="zipcode">Postkod:</label>
+                <input type="text" class="form-control" name="address[zipcode]" id="zipcode" placeholder="Postkod" value="{{project.address.zipcode}}">
+
+                <label class="control-label" for="city">Ort:</label>
+                <input type="text" class="form-control" name="address[city]" id="city" placeholder="Ort" value="{{project.address.city}}">
+            </div>
+        </div>
+        <div class="row spacing">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <a href="/projects"><button type="button" class="btn btn-default btn-hideable">Avbryt</button></a>
+                    <input class="btn btn-info btn-hideable" type="submit" value="Spara"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+</form>
+
+<!-- Form for editing referenced people -->
+<form class="form-vertical">
+    <fieldset {{#unless editable}} disabled {{/unless}}>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Tillsatta Personer</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well well-sm well-bordered pre-scrollable">
+                    <table id="peopleTable" class="table table-responsive table-striped table-hover table-selectable" data-target="#personDetails" data-load="getPersonDetails">
+                        {{> project.person.listing project.people }}
+                    </table>
+                </div>
+                <button type="button" class="btn btn-info btn-hideable" data-remote="false" data-toggle="modal" data-target="#addPeopleModal">Lägg till personer</button>
+            </div>
+            <div class="col-md-6">
+                <div id="personDetails">
+                </div>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+</form>
+
+<!-- TimeReport -->
+<form class="form-vertical">
+    <fieldset {{#unless editable}} disabled {{/unless}}>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Tidsrapporter</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    {{> project.time_report timereports}}
+                </div>
+                <div class="col-md-6">
+
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<!-- MODALS -->
+
+<!-- Modal for adding people-->
+<div id="addPeopleModal" class="modal fade" role="dialog" data-load="modalGetPeopleTable">
+    <div class="modal-dialog modal-sm">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <!-- data is loaded into modal-body -->
+            <div class="modal-body well well-sm pre-scrollable">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Avbryt</button>
+                <button type="button" class="btn btn-success" data-dismiss="modal" disabled>Lägg till</button>
+            </div>
+        </div>
+
+    </div>
+</div>

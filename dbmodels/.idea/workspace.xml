@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="012c6821-96d1-416d-a418-807cb7684518" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="$PROJECT_DIR$/../.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../app.js" afterPath="$PROJECT_DIR$/../app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../authentication/index.js" afterPath="$PROJECT_DIR$/../authentication/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../authentication/init.js" afterPath="$PROJECT_DIR$/../authentication/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../authentication/middleware.js" afterPath="$PROJECT_DIR$/../authentication/middleware.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../config.json" afterPath="$PROJECT_DIR$/../config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../dbcontext.js" afterPath="$PROJECT_DIR$/../dbcontext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Object.js" afterPath="$PROJECT_DIR$/Object.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Person.js" afterPath="$PROJECT_DIR$/Person.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Project.js" afterPath="$PROJECT_DIR$/Project.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TimeReport.js" afterPath="$PROJECT_DIR$/TimeReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lib/log.js" afterPath="$PROJECT_DIR$/../lib/log.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../lib/util.js" afterPath="$PROJECT_DIR$/../lib/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../models/common.js" afterPath="$PROJECT_DIR$/../models/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../models/person.js" afterPath="$PROJECT_DIR$/../models/person.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../models/project.js" afterPath="$PROJECT_DIR$/../models/project.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../public/js/fetch.js" afterPath="$PROJECT_DIR$/../public/js/fetch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../public/js/lib/boostrap-extensions.js" afterPath="$PROJECT_DIR$/../public/js/lib/boostrap-extensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../public/js/lib/handlebarsHelpers.js" afterPath="$PROJECT_DIR$/../public/js/lib/handlebarsHelpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../public/js/lib/helper-functions.js" afterPath="$PROJECT_DIR$/../public/js/lib/helper-functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../public/js/ui.js" afterPath="$PROJECT_DIR$/../public/js/ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../public/styles/css/styles.css" afterPath="$PROJECT_DIR$/../public/styles/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../routes/web/ajax/objects.js" afterPath="$PROJECT_DIR$/../routes/web/ajax/objects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../routes/web/ajax/people.js" afterPath="$PROJECT_DIR$/../routes/web/ajax/people.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../routes/web/ajax/projects.js" afterPath="$PROJECT_DIR$/../routes/web/ajax/projects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../routes/web/ajax/timeReports.js" afterPath="$PROJECT_DIR$/../routes/web/ajax/timeReports.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../routes/web/objects.js" afterPath="$PROJECT_DIR$/../routes/web/objects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../routes/web/people.js" afterPath="$PROJECT_DIR$/../routes/web/people.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../routes/web/projects.js" afterPath="$PROJECT_DIR$/../routes/web/projects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/alert.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/alert.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/pagination.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/pagination.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/person.absence.edit.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/person.absence.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/person.absence.listing.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/person.absence.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/project.listing.table.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/project.listing.table.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/project.modal.people.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/project.modal.people.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/project.person.assignment.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/project.person.assignment.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/project.person.listing.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/project.person.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../shared/templates/project.time_report.handlebars" afterPath="$PROJECT_DIR$/../shared/templates/project.time_report.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/error.404.handlebars" afterPath="$PROJECT_DIR$/../views/error.404.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/error.generic.handlebars" afterPath="$PROJECT_DIR$/../views/error.generic.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/home.handlebars" afterPath="$PROJECT_DIR$/../views/home.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/layouts/clean.handlebars" afterPath="$PROJECT_DIR$/../views/layouts/clean.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/layouts/main.handlebars" afterPath="$PROJECT_DIR$/../views/layouts/main.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/login.handlebars" afterPath="$PROJECT_DIR$/../views/login.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/object.borrow.handlebars" afterPath="$PROJECT_DIR$/../views/object.borrow.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/object.edit.handlebars" afterPath="$PROJECT_DIR$/../views/object.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/object.listing.handlebars" afterPath="$PROJECT_DIR$/../views/object.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/partials/main.footer.handlebars" afterPath="$PROJECT_DIR$/../views/partials/main.footer.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/partials/main.head.handlebars" afterPath="$PROJECT_DIR$/../views/partials/main.head.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/partials/main.header.handlebars" afterPath="$PROJECT_DIR$/../views/partials/main.header.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/person.edit.handlebars" afterPath="$PROJECT_DIR$/../views/person.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/person.listing.handlebars" afterPath="$PROJECT_DIR$/../views/person.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/project.edit.handlebars" afterPath="$PROJECT_DIR$/../views/project.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/project.listing.handlebars" afterPath="$PROJECT_DIR$/../views/project.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../views/timereport.handlebars" afterPath="$PROJECT_DIR$/../views/timereport.handlebars" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1023" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dbmodels" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dbmodels" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="012c6821-96d1-416d-a418-807cb7684518" name="Default" comment="" />
+      <created>1507515637177</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1507515637177</updated>
+      <workItem from="1507515639357" duration="40000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="40000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+</project>

@@ -1,0 +1,24 @@
+<!-- shared/templates/pagination.handlebars -->
+{{#if pagination.enabled}}
+    <ul class="pagination pagination-sm pull-right">
+        {{#paginate pagination type="previous"}}
+            <li class="{{#if disabled}}disabled{{/if}}" data-page="{{n}}">
+                <a class="{{#if disabled}}disabled{{/if}}" href="?page={{n}}" aria-label="Previous">
+                    <span aria-hidden="true">«</span>
+                    <span class="sr-only">Previous</span>
+                </a>
+            </li>
+        {{/paginate}}
+        {{#paginate pagination type="middle" limit="10"}}
+            <li class="{{#if active}}active{{/if}}" data-page="{{n}}"><a class="{{#if disabled}}disabled{{/if}}" href="?page={{n}}">{{n}}</a></li>
+        {{/paginate}}
+        {{#paginate pagination type="next"}}
+            <li class="{{#if disabled}}disabled{{/if}}" data-page="{{n}}">
+                <a class="{{#if disabled}}disabled{{/if}}" href="?page={{n}}" aria-label="Next">
+                    <span aria-hidden="true">»</span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </li>
+        {{/paginate}}
+    </ul>
+{{/if}}

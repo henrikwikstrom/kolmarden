@@ -1,0 +1,6 @@
+<!-- shared/templates/alert.handlebars -->
+
+<div id="notificationAlert" class="alert alert-dismissible {{class}}" {{#unless message}} hidden {{/unless}}>
+    <a href="#" class="close" data-hide="alert" aria-label="close">&times;</a>
+    <div class="alert-content">{{message}}</div>
+</div>

@@ -1,0 +1,11 @@
+<!-- shared/templates/project.person.listing.handlebars -->
+
+<tbody>
+{{#each this}}
+<tr data-objectid="{{person._id}}" data-object="{{jsonStringify this}}">
+    <td>{{person.firstname}} {{person.lastname}}</td>
+    <td>{{role}}</td>
+    <td>{{start}} {{#if end}}&#8211;{{/if}} {{end}}</td>
+</tr>
+{{/each}}
+</tbody>

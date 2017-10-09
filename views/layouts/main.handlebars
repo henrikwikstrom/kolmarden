@@ -1,0 +1,35 @@
+<!-- views/layouts/main.handlebars -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{> main.head }}
+    <script>
+        //Expose handlebar templates.
+        (function () {
+            var revive    = Handlebars.template,
+                    templates = Handlebars.templates = Handlebars.templates || {};
+            {{#templates}}
+                templates['{{{name}}}'] = revive({{{template}}});
+                Handlebars.registerPartial('{{{name}}}', revive({{{template}}}));
+            {{/templates}}
+        }());
+    </script>
+    {{{_sections.head}}}
+</head>
+
+<body class="container">
+<header>
+    {{> main.header }}
+</header>
+
+<main>
+    {{{ body }}}
+</main>
+
+<footer>
+    {{> main.footer }}
+</footer>
+
+</body>
+</html>

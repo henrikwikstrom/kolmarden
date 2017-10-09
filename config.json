@@ -1,0 +1,8 @@
+{
+  "db": {
+    "connectionstring" : "mongodb://localhost/dev-db"
+  },
+  "http" : {
+    "port" : 3100
+  }
+}

@@ -1,0 +1,216 @@
+<!-- views/person.edit.handlebars -->
+
+{{#section 'head'}}
+    <!-- added by project.edit.handlebars -->
+    <script src="http://davidshimjs.github.com/qrcodejs/qrcode.min.js"></script>
+    <script type="application/javascript">
+        jQuery(document).ready(function($) {
+            if (window.location.href.indexOf("new") < 0) {
+                var url = (window.location.href[window.location.href.length-1] == '/') ? window.location.href+"borrow" : window.location.href+"/borrow";
+                var size = $("#qrcode").innerWidth() * 0.8;
+                helpers.generateQR(document.getElementById("qrcode"), {
+                    text: url,
+                    width: size,
+                    height: size,
+                    correctLevel: QRCode.CorrectLevel.L
+                });
+            }
+            if ("{{object.loan.person}}" == "" && "{{object.loan.project}}" == "") {
+                $("#loanstart").attr("disabled", true);
+                $("#loanend").attr("disabled", true);
+            }
+            if ("{{object.loan.person}}" == "") {
+                $('#peopleTable').find(".row-null").addClass("active");
+            }
+            if ("{{object.loan.project}}" == "") {
+                $('#projectTable').find(".row-null").addClass("active");
+            }
+
+            var main = $("main");
+            main.off('change', 'input[type=radio][name=optradio]')
+                .on('change', 'input[type=radio][name=optradio]', function() {
+                    $(".tab-pane").find("tr").removeClass("active");
+                    $('.row-null').addClass("active");
+                    $("#loanproject").attr("value", "");
+                    $("#loanperson").attr("value", "");
+
+                    disableLoanDates();
+                });
+
+            main.off('keyup', ".filter-box").on('keyup','.filter-box', function() {
+                //alert("keyup");
+                // Declare variables
+                var input = $(this);
+                var filter = input.val().toUpperCase();
+                var table = $(input.data('target'));
+                var tr = table.find("tr");
+
+                // Loop through all table rows, and hide those who don't match the search query
+                tr.each(function(index) {
+                    var td = $(this).find("td")[0];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    }
+                });
+            });
+
+            main.off('click', '#del-object-btn').on('click', '#del-object-btn', function() {
+                bootbox.confirm({
+                    size: "small",
+                    message: "Vill du ta bort det här objektet?",
+                    buttons: {
+                        confirm: {
+                            label: 'Ta bort',
+                            className: 'btn-danger'
+                        },
+                        cancel: {
+                            label: 'Avbryt',
+                            className: 'btn-default'
+                        }
+                    },
+                    callback: function(confirmed){
+                        if (confirmed) {
+                            fetch('/ajax/objects/{{object._id}}', {
+                                method: 'delete'
+                            }).then(function(response) {
+                                window.location.replace("/objects");
+                            });
+                        }
+                    }
+                });
+            });
+        });
+
+        function selectPerson(target, row) {
+            var selectedId = (row != null) ? $(row).data("objectid") : "";
+            if (selectedId == "") {
+                disableLoanDates()
+            }
+            else {
+                enableLoanDates()
+            }
+            $(target).attr("value", selectedId);
+        }
+
+        function selectProject(target, row) {
+            var selectedId = (row != null) ? $(row).data("objectid") : "";
+            if (selectedId == "") {
+                disableLoanDates()
+            }
+            else {
+                enableLoanDates()
+            }
+            $(target).attr("value", selectedId);
+        }
+
+        function disableLoanDates() {
+            var loanstart = $("#loanstart");
+            var loanend = $("#loanend");
+            loanstart.val("").trigger('change');
+            loanend.val("").trigger('change');
+            loanstart.attr("disabled", true);
+            loanend.attr("disabled", true);
+        }
+
+        function enableLoanDates() {
+            var loanstart = $("#loanstart");
+            var loanend = $("#loanend");
+            loanstart.attr("disabled", false);
+            loanend.attr("disabled", false);
+            loanstart.val(helpers.getDateString(new Date())).trigger('change');
+        }
+    </script>
+{{/section}}
+
+{{#if object.name}}
+    <h3>{{object.name}}</h3>
+{{else}}
+    <h3>Nytt Objekt</h3>
+{{/if}}
+<hr>
+{{> alert notification}}
+<form class="form-vertical" action="/objects/{{object._id}}" method="POST">
+    <fieldset {{#unless editable}} disabled {{/unless}}>
+    <div class="form-group">
+        <button type="button" id="del-object-btn" class="btn btn-sm btn-danger btn-hideable pull-right" >Ta bort Object</button>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Objekt information</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <label class="control-label" for="name">Namn:</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Namn" required value="{{object.name}}">
+                <label class="control-label" for="serialnumber">Serienummer:</label>
+                <input type="text" class="form-control" name="serialnumber" id="serialnumber" placeholder="Serienummer" value="{{object.serialnumber}}">
+
+                <label class="control-label" for="purchasedate">Inköpsdatum:</label>
+                <input type="date" class="form-control" name="purchasedate" id="purchasedate" placeholder="Inköpsdatum" value="{{object.purchasedate}}">
+
+                <label class="control-label" for="category">Kategori:</label>
+                <input type="text" class="form-control" name="category" id="category" placeholder="Kategori" value="{{object.category}}">
+            </div>
+            <div class="col-md-4">
+                <label class="control-label" >Utlånad till:</label>
+                <div class="radio">
+                    <label class="radio-inline"><input data-radio-toggle="tab" href="#personTab" type="radio" name="optradio" {{#unless object.loan.project}}checked{{/unless}}>Person</label>
+                    <label class="radio-inline"><input data-radio-toggle="tab" href="#projectTab" type="radio" name="optradio" {{#if object.loan.project}}checked{{/if}}>Projekt</label>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane {{#unless object.loan.project}}active{{/unless}}" id="personTab">
+                        <input id="loanperson" name="loan[person]" value="{{object.loan.person}}" hidden/>
+                        <input class="form-control filter-box" data-target="#peopleTable" type="text" placeholder="Sök"/>
+                        <div class="well well-sm well-bordered pre-scrollable" style="height:170px;">
+                            <table id="peopleTable" class="table table-responsive table-striped table-hover table-selectable" data-target="#loanperson" data-load="selectPerson">
+                                <tr class="row-null" data-objectid=""><td>None</td><td></td></tr>
+                                {{#each people}}
+                                    <tr {{#if_eq _id ../object.loan.person}}class="active"{{/if_eq}} data-objectid="{{_id}}"><td>{{firstname}} {{lastname}}</td><td>{{employee_number}}</td></tr>
+                                {{/each}}
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane {{#if object.loan.project}}active{{/if}}" id="projectTab">
+                        <input id="loanproject" name="loan[project]" value="{{loan.project}}" hidden/>
+                        <input class="form-control filter-box" data-target="#projectTable" type="text" placeholder="Sök"/>
+                        <div class="well well-sm well-bordered pre-scrollable" style="height:170px;">
+                            <table id="projectTable" class="table table-responsive table-striped table-hover table-selectable" data-target="#loanproject" data-load="selectProject">
+                                <tr class="row-null" data-objectid=""><td>None</td><td></td></tr>
+                                {{#each projects}}
+                                    <tr {{#if_eq _id ../object.loan.project}}class="active"{{/if_eq}} data-objectid="{{_id}}"><td>{{name}}</td><td>{{ao_number}}</td></tr>
+                                {{/each}}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label class="control-label" for="loanstart" style="margin-top:43px;">Startdatum:</label>
+                <input type="date" class="form-control" name="loan[start]" id="loanstart" placeholder="Startdatum" value="{{object.loan.start}}">
+                <label class="control-label" for="loanend">Slutdatum:</label>
+                <input type="date" class="form-control" name="loan[end]" id="loanend" placeholder="Slutdatum" value="{{object.loan.end}}">
+            </div>
+        </div>
+        <div class="row spacing">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <a href="/objects"><button type="button" class="btn btn-default btn-hideable">Avbryt</button></a>
+                    <input class="btn btn-info btn-hideable" type="submit" value="Spara"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+</form>

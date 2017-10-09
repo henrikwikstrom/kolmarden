@@ -1,0 +1,14 @@
+<!-- shared/templates/project.modal.people.handlebars -->
+
+<table id="modalContentTable" class="table table-responsive">
+    <tbody>
+    {{#each this}}
+    <tr>
+        <td>{{firstname}} {{lastname}}</td>
+        <td><input type="checkbox" data-objectid="{{_id}}"/></td>
+    </tr>
+    {{else}}
+        <h4>Inga personer att lägga till</h4>
+    {{/each}}
+    </tbody>
+</table>

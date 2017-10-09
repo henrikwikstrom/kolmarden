@@ -1,0 +1,104 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 40px;
+}
+.footer {
+    position: absolute;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 75px;
+    padding-top: 1em;
+}
+
+.navbar-brand {
+    padding: 0px; /* firefox bug fix */
+}
+.navbar-brand>img {
+    height: 100%;
+    padding: 15px; /* firefox bug fix */
+    width: auto;
+}
+
+
+
+.spacing {
+    margin-top: 1em;
+}
+
+.login-brand {
+    text-align: center;
+    padding: 1em 0.5em;
+    margin-bottom: 3em;
+}
+
+.table-clickable tbody tr, .table-selectable tbody tr {
+    cursor: pointer;
+}
+
+.table-selectable tbody tr.active td{
+    background-color: transparent;
+}
+
+.table-selectable tbody tr.active:hover td{
+    background-color: transparent;
+}
+
+.table-selectable tbody tr.active {
+    background-color: #5d91d9;
+}
+
+.table-selectable tbody tr.active:hover {
+    background-color: #4478C0;
+}
+
+.well {
+    background:transparent;
+}
+
+.well-bordered {
+    border: solid 1px lightgray;
+}
+
+.well-xsm {
+    max-height:150px;
+    max-width: 250px;
+}
+
+.btn-space {
+    margin-right: 5px;
+}
+
+.btn-hideable:disabled {
+    visibility: hidden;
+}
+
+.pagination a {
+    text-decoration: none !important;
+}
+
+a.disabled {
+    pointer-events: none;
+}
+
+#qrcode {
+    width: 50%;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+/*
+   Makes sure page scrollbar remains when modal are open.
+   This prevents the page from rescaling slightly and causing annoyance.
+*/
+.modal-open {
+    padding-right: 15px !important;
+}
+html {
+    overflow-y: scroll !important;
+}

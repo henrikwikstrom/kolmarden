@@ -1,0 +1,18 @@
+<!-- shared/templates/project.person.assignment.handlebars -->
+
+<h4>{{person.firstname}} {{person.lastname}}</h4>
+<input type="text" name="person" value="{{{person._id}}}" hidden>
+
+<label for="personrole" class="control-label" >projektroll:</label>
+<input id="personrole" class="form-control" type="text" name="role" placeholder="Projektroll" value="{{role}}">
+
+<label for="personstart" class="control-label">Startdatum:</label>
+<input id="personstart" class="form-control" type="date" name="start" placeholder="Startdatum" value="{{start}}">
+
+<label for="personend" class="control-label">Slutdatum:</label>
+<input id="personend" class="form-control" type="date" name="end" placeholder="Slutdatum" value="{{end}}">
+
+<div class="pull-right spacing">
+    <input class="btn btn-danger btn-hideable btn-space" type="button" value="Ta bort"/>
+    <input class="btn btn-info btn-hideable" type="button" value="Spara"/>
+</div>

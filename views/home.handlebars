@@ -1,0 +1,59 @@
+<!-- views/home.handlebars -->
+<script type="application/javascript">
+    jQuery(document).ready(function registerTimeReportPagination($) {
+        //TODO Fetch from database
+        var trace1 = {
+            x: ['AlControll Källare Kylrum', 'Foi Galaxen C1 Pl 1 korridor', 'Ekholmsgården Köket'],
+            y: [56, 113, 83],
+            type: 'bar',
+            name: 'Uppskattat antal timmar',
+            marker: {
+                color: 'rgb(102, 255, 102)',
+                opacity: 1,
+                width:10
+            }
+        };
+
+        var trace2 = {
+            x: ['AlControll Källare Kylrum', 'Foi Galaxen C1 Pl 1 korridor', 'Ekholmsgården Köket'],
+            y: [33, 19, 45],
+            type: 'bar',
+            name: 'Möjliga timmar sedan start',
+            marker: {
+                color: 'rgb(51, 102, 255)',
+                opacity: 1,
+                width:10
+            }
+        };
+
+        var trace3 = {
+            x: ['AlControll Källare Kylrum', 'Foi Galaxen C1 Pl 1 korridor', 'Ekholmsgården Köket'],
+            y: [26, 19, 40],
+            type: 'bar',
+            name: 'Faktiska timmar sedan start',
+            marker: {
+                color: 'rgb(255, 0, 0)',
+                opacity: 1,
+                width:10
+            }
+        };
+
+        var data = [trace1, trace2, trace3];
+
+        var layout = {
+            title: 'Projekt Timmar',
+            xaxis: {
+                tickangle: -40,
+                tickfont: {
+                    size:8
+                }
+            },
+            barmode: 'group',
+            bargap:0.8
+        };
+
+        Plotly.newPlot('projectStats', data, layout, {displayModeBar: false});
+    });
+</script>
+<div id="projectStats">
+</div>

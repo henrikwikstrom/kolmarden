@@ -1,0 +1,48 @@
+{{#section 'head'}}
+    <!-- added by timereport.handlebars -->
+
+    <script src="/js/lib/external/easytimer.js"></script>
+    <script>
+        jQuery(document).ready(function($) {
+            $('#counter').find('.values').toggle();
+            var timer = new Timer();
+            $('#counter').off('click', '.startButton').on('click', '.startButton',function () {
+                timer.start();
+                $(this).html("Avsluta arbetspass");
+                toggleButton($(this))
+            });
+            $('#counter').off('click', '.stopButton').on('click', '.stopButton', function () {
+                timer.stop();
+                $(this).html("Starta arbetspass");
+                toggleButton($(this))
+            });
+            timer.addEventListener('secondsUpdated', function (e) {
+                $('#counter').find('.values').html(timer.getTimeValues().toString());
+            });
+            timer.addEventListener('started', function (e) {
+                $('#counter').find('.values').html(timer.getTimeValues().toString());
+            });
+        })
+
+        function toggleButton(btn) {
+            btn.toggleClass("startButton");
+            btn.toggleClass("stopButton");
+            btn.toggleClass("btn-info");
+            btn.toggleClass("btn-default");
+            $(this).blur()
+
+            $('#counter').find('.values').toggle();
+
+        }
+    </script>
+{{/section}}
+
+<div class="bg-primary login-brand">
+    <h2>CONQR CMS</h2>
+</div>
+<div class="container" id="counter" style="width:400px;">
+    <button class="btn-lg btn-info btn-block startButton btn" type="button">Starta Arbetspass</button>
+    <div  class="login-brand">
+        <h1 class="values">00:00:00</h1>
+    </div>
+</div>

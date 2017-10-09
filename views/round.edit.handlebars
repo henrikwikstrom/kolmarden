@@ -1,0 +1,206 @@
+<!-- views/person.edit.handlebars -->
+
+{{#section 'head'}}
+    <!-- added by project.edit.handlebars -->
+    <script src="http://davidshimjs.github.com/qrcodejs/qrcode.min.js"></script>
+    <script type="application/javascript">
+        jQuery(document).ready(function($) {
+            if (window.location.href.indexOf("new") < 0) {
+                var url = (window.location.href[window.location.href.length-1] == '/') ? window.location.href+"borrow" : window.location.href+"/borrow";
+                var size = $("#qrcode").innerWidth() * 0.8;
+                helpers.generateQR(document.getElementById("qrcode"), {
+                    text: url,
+                    width: size,
+                    height: size,
+                    correctLevel: QRCode.CorrectLevel.L
+                });
+            }
+            if ("{{round.loan.person}}" == "" && "{{round.loan.project}}" == "") {
+                $("#loanstart").attr("disabled", true);
+                $("#loanend").attr("disabled", true);
+            }
+            if ("{{round.loan.person}}" == "") {
+                $('#peopleTable').find(".row-null").addClass("active");
+            }
+            if ("{{round.loan.project}}" == "") {
+                $('#projectTable').find(".row-null").addClass("active");
+            }
+
+            var main = $("main");
+            main.off('change', 'input[type=radio][name=optradio]')
+                .on('change', 'input[type=radio][name=optradio]', function() {
+                    $(".tab-pane").find("tr").removeClass("active");
+                    $('.row-null').addClass("active");
+                    $("#loanproject").attr("value", "");
+                    $("#loanperson").attr("value", "");
+
+                    disableLoanDates();
+                });
+
+            main.off('keyup', ".filter-box").on('keyup','.filter-box', function() {
+                //alert("keyup");
+                // Declare variables
+                var input = $(this);
+                var filter = input.val().toUpperCase();
+                var table = $(input.data('target'));
+                var tr = table.find("tr");
+
+                // Loop through all table rows, and hide those who don't match the search query
+                tr.each(function(index) {
+                    var td = $(this).find("td")[0];
+                    if (td) {
+                        if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                            $(this).show();
+                        } else {
+                            $(this).hide();
+                        }
+                    }
+                });
+            });
+
+            main.off('click', '#del-object-btn').on('click', '#del-object-btn', function() {
+                bootbox.confirm({
+                    size: "small",
+                    message: "Vill du ta bort det här objektet?",
+                    buttons: {
+                        confirm: {
+                            label: 'Ta bort',
+                            className: 'btn-danger'
+                        },
+                        cancel: {
+                            label: 'Avbryt',
+                            className: 'btn-default'
+                        }
+                    },
+                    callback: function(confirmed){
+                        if (confirmed) {
+                            fetch('/ajax/objects/{{round._id}}', {
+                                method: 'delete'
+                            }).then(function(response) {
+                                window.location.replace("/objects");
+                            });
+                        }
+                    }
+                });
+            });
+        });
+
+        function selectPerson(target, row) {
+            var selectedId = (row != null) ? $(row).data("objectid") : "";
+            if (selectedId == "") {
+                disableLoanDates()
+            }
+            else {
+                enableLoanDates()
+            }
+            $(target).attr("value", selectedId);
+        }
+
+        function selectProject(target, row) {
+            var selectedId = (row != null) ? $(row).data("objectid") : "";
+            if (selectedId == "") {
+                disableLoanDates()
+            }
+            else {
+                enableLoanDates()
+            }
+            $(target).attr("value", selectedId);
+        }
+
+        function disableLoanDates() {
+            var loanstart = $("#loanstart");
+            var loanend = $("#loanend");
+            loanstart.val("").trigger('change');
+            loanend.val("").trigger('change');
+            loanstart.attr("disabled", true);
+            loanend.attr("disabled", true);
+        }
+
+        function enableLoanDates() {
+            var loanstart = $("#loanstart");
+            var loanend = $("#loanend");
+            loanstart.attr("disabled", false);
+            loanend.attr("disabled", false);
+            loanstart.val(helpers.getDateString(new Date())).trigger('change');
+        }
+    </script>
+{{/section}}
+
+{{#if round.name}}
+    <h3>{{round.name}}</h3>
+{{else}}
+    <h3>Ny rond</h3>
+{{/if}}
+<hr>
+{{> alert notification}}
+<form class="form-vertical" action="/rounds/{{round._id}}" method="POST">
+    <fieldset {{#unless editable}} disabled {{/unless}}>
+    <div class="form-group">
+        {{#if round.name}}
+        <button type="button" id="del-object-btn" class="btn btn-sm btn-danger btn-hideable pull-right" >Ta bort rond</button>
+        {{/if}}
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Rondinformation</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <label class="control-label" for="name">Namn:</label>
+                <input type="text" class="form-control" name="name" id="name" placeholder="Namn" required value="{{round.name}}">
+
+            </div>
+            <div class="col-md-7">
+                <label class="control-label">Stationer:</label>
+                <div class="radio">
+                    <label class="radio-inline"><input data-radio-toggle="tab" href="#personTab" type="radio" name="optradio" {{#unless round.loan.project}}checked{{/unless}}>Person</label>
+                    <label class="radio-inline"><input data-radio-toggle="tab" href="#projectTab" type="radio" name="optradio" {{#if round.loan.project}}checked{{/if}}>Projekt</label>
+                </div>
+
+                <div class="tab-content">
+                    <div class="tab-pane {{#unless round.loan.project}}active{{/unless}}" id="personTab">
+                        <input id="loanperson" name="loan[person]" value="{{round.loan.person}}" hidden/>
+                        <input class="form-control filter-box" data-target="#peopleTable" type="text" placeholder="Sök"/>
+                        <div class="well well-sm well-bordered pre-scrollable" style="height:170px;">
+                            <table id="peopleTable" class="table table-responsive table-striped table-hover table-selectable" data-target="#loanperson" data-load="selectPerson">
+                                <tr class="row-null" data-objectid=""><td>None</td><td></td></tr>
+                                {{#each people}}
+                                    <tr {{#if_eq _id ../round.loan.person}}class="active"{{/if_eq}} data-objectid="{{_id}}"><td>{{firstname}} {{lastname}}</td><td>{{employee_number}}</td></tr>
+                                {{/each}}
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane {{#if round.loan.project}}active{{/if}}" id="projectTab">
+                        <input id="loanproject" name="loan[project]" value="{{loan.project}}" hidden/>
+                        <input class="form-control filter-box" data-target="#projectTable" type="text" placeholder="Sök"/>
+                        <div class="well well-sm well-bordered pre-scrollable" style="height:170px;">
+                            <table id="projectTable" class="table table-responsive table-striped table-hover table-selectable" data-target="#loanproject" data-load="selectProject">
+                                <tr class="row-null" data-objectid=""><td>None</td><td></td></tr>
+                                {{#each projects}}
+                                    <tr {{#if_eq _id ../round.loan.project}}class="active"{{/if_eq}} data-objectid="{{_id}}"><td>{{name}}</td><td>{{ao_number}}</td></tr>
+                                {{/each}}
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="row spacing">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <a href="/rounds"><button type="button" class="btn btn-default btn-hideable">Avbryt</button></a>
+                    <input class="btn btn-info btn-hideable" type="submit" value="Spara"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="qrcode"></div>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+</form>

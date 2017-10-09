@@ -1,0 +1,32 @@
+{
+  "name": "bunker-cms",
+  "version": "0.7.2",
+  "description": "Project managment tool",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "mocha test"
+  },
+  "author": "Jacob Nobrant",
+  "license": "Proprietary",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "ejs": "^2.4.2",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.1",
+    "mongoose": "^4.5.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "qrcode-reader": "^1.0.3",
+    "requirejs": "^2.2.0",
+    "serve-favicon": "~2.3.0",
+    "vo": "^4.0.2",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}

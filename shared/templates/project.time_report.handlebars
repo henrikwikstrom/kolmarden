@@ -1,0 +1,31 @@
+<!-- shared/templates/project.time_report.handlebars -->
+
+<table id="timereportTable" class="table table-striped table-responsive table-hover table-selectable table-timereport" data-type="project" data-target="#timereportDetails" data-load="getTimereportDetails">
+    <thead>
+    <tr>
+        <td colspan="2" >{{> pagination}}</td>
+    </tr>
+    <tr>
+        <th>Person</th>
+        <th>Datum</th>
+        <th>Interval</th>
+        <th>Timmar</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each entries}}
+        <tr data-objectid="{{_id}}" data-object="{{jsonStringify this}}">
+            <!--<th scope="row">{{tableIndex @index}}</th>-->
+            <td>{{person.firstname}} {{person.lastname}}</td>
+            <td>{{FormatDate start}}</td>
+            <td>{{GetInterval start end}}</td>
+            <td>{{HoursBetween start end}}</td>
+        </tr>
+    {{/each}}
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="2">{{> pagination}}</td>
+    </tr>
+    </tfoot>
+</table>

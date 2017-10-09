@@ -1,0 +1,206 @@
+<!-- views/person.edit.handlebars -->
+
+{{#section 'head'}}
+    <!-- added by project.edit.handlebars -->
+
+    <script type="application/javascript">
+        jQuery(document).ready(function($) {
+            var main = $("main");
+            main.off('click', '#del-person-btn').on('click', '#del-person-btn', function() {
+                bootbox.confirm({
+                    size: "small",
+                    message: "Vill du ta bort den här personen?",
+                    buttons: {
+                        confirm: {
+                            label: 'Ta bort',
+                            className: 'btn-danger'
+                        },
+                        cancel: {
+                            label: 'Avbryt',
+                            className: 'btn-default'
+                        }
+                    },
+                    callback: function(confirmed){
+                        if (confirmed) {
+                            fetch('/ajax/people/{{person._id}}', {
+                                method: 'delete',
+                            }).then(function(response) {
+                                window.location.replace("/people");
+                            });
+                        }
+                    }
+                });
+            });
+
+            main.off('click', '#newAbsenceBtn').on('click', '#newAbsenceBtn', function() {
+                getAbsenceDetails("#absenceDetails", null);
+            });
+        });
+
+        function getAbsenceDetails(target, row) {
+            var data = (row != null) ? $(row).data("object") : {};
+            $(target).html(Handlebars.templates['person.absence.edit'](data));
+
+            var rows = [];
+            $("#absenceTable").find('tr').each(function (index){
+                rows.push($(this).data('objectid'));
+            });
+
+            $(target).off('click', ".btn-info").on('click', ".btn-info",function() {
+                fetch('/ajax/people/{{person._id}}/absence', {
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'
+                    },
+                    method: 'post',
+                    body: $(target).closest("form").serialize()
+                }).then(function(response) {
+                    return response.json();
+                }).then(function(json) {
+                    populateAbsenceTable(json);
+
+                    var nRows = [];
+                    $("#absenceTable").find('tr').each(function (index){
+                        nRows.push($(this).data('objectid'));
+                    });
+
+                    var RowId = nRows.filter( function( el ) {
+                        return rows.indexOf( el ) < 0;
+                    })[0];
+
+                    RowId = (RowId == undefined) ? data._id : RowId;
+
+                    var newRow = $('#absenceTable').find('tr[data-objectid="'+RowId+'"]');
+
+                    getAbsenceDetails(target, $(newRow));
+                    $(newRow).addClass("active");
+                });
+            });
+
+            $(target).off('click', ".btn-danger").on('click', ".btn-danger",function() {
+                bootbox.confirm({
+                    size: "small",
+                    message: "Vill du ta bort den här frånvaron?",
+                    buttons: {
+                        confirm: {
+                            label: 'Ta bort',
+                            className: 'btn-danger'
+                        },
+                        cancel: {
+                            label: 'Avbryt',
+                            className: 'btn-default'
+                        }
+                    },
+                    callback: function(confirmed){
+                        if (confirmed) {
+                            fetch('/ajax/people/{{person._id}}/absence/'+data._id, {
+                                method: 'delete',
+                            }).then(function(response) {
+                                return response.json();
+                            }).then(function(json) {
+                                populateAbsenceTable(json);
+                                $("#absenceDetails").html("");
+                            });
+                        }
+                    }
+                });
+            });
+        }
+
+        function populateAbsenceTable(json) {
+            $("#absenceTable").html(Handlebars.templates['person.absence.listing'](json.absence));
+        }
+    </script>
+{{/section}}
+
+{{#if person.firstname}}
+    <h3>{{person.firstname}} {{person.lastname}}</h3>
+{{else}}
+    <h3>Ny Person</h3>
+{{/if}}
+<hr>
+{{> alert notification}}
+<form class="form-vertical" action="/people/{{person._id}}" method="POST">
+    <fieldset {{#unless editable}} disabled {{/unless}}>
+    <div class="form-group">
+        <button type="button" id="del-person-btn" class="btn btn-sm btn-danger btn-hideable pull-right" >Ta bort Person</button>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Person Information</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label class="control-label" for="firstname">Förnamn:</label>
+                <input type="text" class="form-control" name="firstname" id="firstname" placeholder="Förnamn" required value="{{person.firstname}}">
+                <label class="control-label" for="lastname">Efternamn:</label>
+                <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Efternamn" required value="{{person.lastname}}">
+
+                <label class="control-label" for="personnumber">Personnummer:</label>
+                <input type="text" class="form-control" name="personnumber" id="personnumber" placeholder="Personnummer" value="{{person.personnumber}}">
+
+                <label class="control-label" for="employeenumber">Anställningsnummer:</label>
+                <input type="text" class="form-control" name="employee_number" id="employeenumber" placeholder="Anställningsnummer" value="{{person.employee_number}}">
+
+                <label class="control-label" for="phone">Mobiltelefon:</label>
+                <input type="text" class="form-control" name="cellphone" id="phone" placeholder="Mobiltelefon" value="{{person.cellphone}}">
+
+            </div>
+            <div class="col-md-6">
+                <label class="control-label" for="workphone">Jobbtelefon:</label>
+                <input type="text" class="form-control" name="workphone" id="workphone" placeholder="Jobbtelefon" value="{{person.workphone}}">
+                <label class="control-label" for="street">Gatuadress:</label>
+                <input type="text" class="form-control" name="address[street]" id="street" placeholder="Gatuadress" value="{{person.address.street}}">
+
+                <label class="control-label" for="zipcode">Postkod</label>
+                <input type="text" class="form-control" name="address[zipcode]" id="zipcode" placeholder="Postkod" value="{{person.address.zipcode}}">
+
+                <label class="control-label" for="city">Ort</label>
+                <input type="text" class="form-control" name="address[city]" id="city" placeholder="Ort" value="{{person.address.city}}">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Nödkontakt</h3>
+                <label class="control-label" for="emergencyname">Namn:</label>
+                <input type="text" class="form-control" name="emergency_contact[name]" id="emergencyname" placeholder="Namn" value="{{person.emergency_contact.name}}">
+                <label class="control-label" for="emergencyphone">Telefon:</label>
+                <input type="text" class="form-control" name="emergency_contact[phone]" id="emergencyphone" placeholder="Telefon" value="{{person.emergency_contact.phone}}">
+            </div>
+        </div>
+        <div class="row spacing">
+            <div class="col-md-12">
+                <div class="pull-right">
+                    <a href="/people"><button type="button" class="btn btn-default btn-hideable">Avbryt</button></a>
+                    <input class="btn btn-info btn-hideable" type="submit" value="Spara"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    </fieldset>
+</form>
+<form class="form-vertical">
+    <fieldset {{#unless editable}} disabled {{/unless}}>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Frånvaro</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="well well-sm well-bordered pre-scrollable">
+                        <table id="absenceTable" class="table table-striped table-responsive table-hover table-selectable" data-target="#absenceDetails" data-load="getAbsenceDetails">
+                            {{> person.absence.listing person.absence}}
+                        </table>
+                    </div>
+                    <button id="newAbsenceBtn" type="button" class="btn btn-info btn-hideable">Ny Frånvaro</button>
+                </div>
+                <div class="col-md-6">
+                    <div id="absenceDetails">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</form>

@@ -1,0 +1,61 @@
+<!-- views/project.listing.handlebars -->
+
+{{#section 'head'}}
+    <!-- added by project.listing.handlebars -->
+
+    <script type="application/javascript">
+        jQuery(document).ready(function($) {
+            $("main").off('click', '.pagination-projects li').on('click', '.pagination-projects li', function(e) {
+                e.preventDefault();
+                if(!$(this).hasClass("disabled")) {
+                    var filter = $(this).closest(".tab-pane").attr('id');
+                    fetchProjects(filter, $(this).data("page"));
+                }
+            });
+        });
+
+        function fetchProjects(filter, page) {
+            fetch('/ajax/projects/filter?page='+page+'&field=status&value='+filter+'', {
+                method: 'get'
+            }).then(function(response) {
+                return response.json();
+            }).then(function(data) {
+                filter = (filter == "") ? "all" : filter;
+                var result = Handlebars.templates['project.listing.table'](data);
+                $("#"+filter+"").html(result);
+            }).catch(function(err) {
+                // Error :(
+            });
+        }
+    </script>
+{{/section}}
+
+<h3>Projekt</h3>
+<hr>
+<form method="GET" action="/projects/new">
+    <button class="btn btn-primary" >Nytt Projekt</button>
+</form>
+<hr>
+<ul class="nav nav-tabs nav-justified">
+    <li class="active">
+        <a  href="#ongoing" data-toggle="tab">Ongoing</a>
+    </li>
+    <li>
+        <a href="#finished" data-toggle="tab">Finished</a>
+    </li>
+    <li>
+        <a href="#all" data-toggle="tab">All</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane active" id="ongoing">
+        {{> project.listing.table projects.ongoing}}
+    </div>
+    <div class="tab-pane" id="finished">
+        {{> project.listing.table projects.finished}}
+    </div>
+    <div class="tab-pane" id="all">
+        {{> project.listing.table projects.all}}
+    </div>
+</div>

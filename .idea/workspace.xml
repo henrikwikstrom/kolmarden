@@ -1,0 +1,1103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="731c1e0f-cd46-4ebc-b734-5069b7240443" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/authentication/index.js" afterPath="$PROJECT_DIR$/authentication/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/authentication/init.js" afterPath="$PROJECT_DIR$/authentication/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/authentication/middleware.js" afterPath="$PROJECT_DIR$/authentication/middleware.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.json" afterPath="$PROJECT_DIR$/config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbcontext.js" afterPath="$PROJECT_DIR$/dbcontext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/Object.js" afterPath="$PROJECT_DIR$/dbmodels/Object.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/Person.js" afterPath="$PROJECT_DIR$/dbmodels/Person.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/Project.js" afterPath="$PROJECT_DIR$/dbmodels/Project.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dbmodels/TimeReport.js" afterPath="$PROJECT_DIR$/dbmodels/TimeReport.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/log.js" afterPath="$PROJECT_DIR$/lib/log.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/util.js" afterPath="$PROJECT_DIR$/lib/util.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/common.js" afterPath="$PROJECT_DIR$/models/common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/person.js" afterPath="$PROJECT_DIR$/models/person.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/project.js" afterPath="$PROJECT_DIR$/models/project.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/fetch.js" afterPath="$PROJECT_DIR$/public/js/fetch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/lib/boostrap-extensions.js" afterPath="$PROJECT_DIR$/public/js/lib/boostrap-extensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/lib/handlebarsHelpers.js" afterPath="$PROJECT_DIR$/public/js/lib/handlebarsHelpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/lib/helper-functions.js" afterPath="$PROJECT_DIR$/public/js/lib/helper-functions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ui.js" afterPath="$PROJECT_DIR$/public/js/ui.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/css/styles.css" afterPath="$PROJECT_DIR$/public/styles/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/styles/less/variables.less" afterPath="$PROJECT_DIR$/public/styles/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web/ajax/objects.js" afterPath="$PROJECT_DIR$/routes/web/ajax/objects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web/ajax/people.js" afterPath="$PROJECT_DIR$/routes/web/ajax/people.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web/ajax/projects.js" afterPath="$PROJECT_DIR$/routes/web/ajax/projects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web/ajax/timeReports.js" afterPath="$PROJECT_DIR$/routes/web/ajax/timeReports.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web/objects.js" afterPath="$PROJECT_DIR$/routes/web/objects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web/people.js" afterPath="$PROJECT_DIR$/routes/web/people.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web/projects.js" afterPath="$PROJECT_DIR$/routes/web/projects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/alert.handlebars" afterPath="$PROJECT_DIR$/shared/templates/alert.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/pagination.handlebars" afterPath="$PROJECT_DIR$/shared/templates/pagination.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/person.absence.edit.handlebars" afterPath="$PROJECT_DIR$/shared/templates/person.absence.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/person.absence.listing.handlebars" afterPath="$PROJECT_DIR$/shared/templates/person.absence.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/project.listing.table.handlebars" afterPath="$PROJECT_DIR$/shared/templates/project.listing.table.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/project.modal.people.handlebars" afterPath="$PROJECT_DIR$/shared/templates/project.modal.people.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/project.person.assignment.handlebars" afterPath="$PROJECT_DIR$/shared/templates/project.person.assignment.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/project.person.listing.handlebars" afterPath="$PROJECT_DIR$/shared/templates/project.person.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared/templates/project.time_report.handlebars" afterPath="$PROJECT_DIR$/shared/templates/project.time_report.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/error.404.handlebars" afterPath="$PROJECT_DIR$/views/error.404.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/error.generic.handlebars" afterPath="$PROJECT_DIR$/views/error.generic.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/home.handlebars" afterPath="$PROJECT_DIR$/views/home.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layouts/clean.handlebars" afterPath="$PROJECT_DIR$/views/layouts/clean.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layouts/main.handlebars" afterPath="$PROJECT_DIR$/views/layouts/main.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.handlebars" afterPath="$PROJECT_DIR$/views/login.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/object.borrow.handlebars" afterPath="$PROJECT_DIR$/views/object.borrow.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/object.edit.handlebars" afterPath="$PROJECT_DIR$/views/object.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/object.listing.handlebars" afterPath="$PROJECT_DIR$/views/object.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/main.footer.handlebars" afterPath="$PROJECT_DIR$/views/partials/main.footer.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/main.head.handlebars" afterPath="$PROJECT_DIR$/views/partials/main.head.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/partials/main.header.handlebars" afterPath="$PROJECT_DIR$/views/partials/main.header.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/person.edit.handlebars" afterPath="$PROJECT_DIR$/views/person.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/person.listing.handlebars" afterPath="$PROJECT_DIR$/views/person.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/project.edit.handlebars" afterPath="$PROJECT_DIR$/views/project.edit.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/project.listing.handlebars" afterPath="$PROJECT_DIR$/views/project.listing.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/timereport.handlebars" afterPath="$PROJECT_DIR$/views/timereport.handlebars" />
+    </list>
+    <ignored path="BunkerCMS.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="BunkerCMS" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbcontext.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dbcontext.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.header.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/partials/main.header.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="people.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web/people.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="79" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="79" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/project.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web/projects.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="585">
+              <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+              <folding>
+                <element signature="e#1499#2058#0" expanded="false" />
+                <element signature="e#2176#2959#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="round.edit.handlebars" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/round.edit.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="151">
+              <caret line="148" column="12" lean-forward="true" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
+              <folding>
+                <element signature="n#script#1;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="round.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web/round.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="43" column="56" lean-forward="false" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="round.listing.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/round.listing.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>3001</find>
+      <find>less</find>
+      <find>object.</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>round.</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Noja13it" />
+        <option value="Jacob" />
+        <option value="jacob" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/routes/web/ajax/projects.js" />
+        <option value="$PROJECT_DIR$/routes/web/ajax/people.js" />
+        <option value="$PROJECT_DIR$/routes/web/ajax/timeReport.js" />
+        <option value="$PROJECT_DIR$/routes/web/ajax/timeReports.js" />
+        <option value="$PROJECT_DIR$/public/js/fetch.js" />
+        <option value="$PROJECT_DIR$/views/error.404.handlebars" />
+        <option value="$PROJECT_DIR$/views/error.generic.handlebars" />
+        <option value="$PROJECT_DIR$/views/object.listing.handlebars" />
+        <option value="$PROJECT_DIR$/views/object.edit.handlebars" />
+        <option value="$PROJECT_DIR$/views/person.edit.handlebars" />
+        <option value="$PROJECT_DIR$/views/person.listing.handlebars" />
+        <option value="$PROJECT_DIR$/views/project.edit.handlebars" />
+        <option value="$PROJECT_DIR$/views/project.listing.handlebars" />
+        <option value="$PROJECT_DIR$/shared/templates/person.absence.edit.handlebars" />
+        <option value="$PROJECT_DIR$/shared/templates/project.listing.table.handlebars" />
+        <option value="$PROJECT_DIR$/shared/templates/project.modal.people.handlebars" />
+        <option value="$PROJECT_DIR$/shared/templates/project.person.assignment.handlebars" />
+        <option value="$PROJECT_DIR$/views/layouts/clean.handlebars" />
+        <option value="$PROJECT_DIR$/authentication/index.js" />
+        <option value="$PROJECT_DIR$/authentication/middleware.js" />
+        <option value="$PROJECT_DIR$/routes/web/people.js" />
+        <option value="$PROJECT_DIR$/routes/web/objects.js" />
+        <option value="$PROJECT_DIR$/views/login.handlebars" />
+        <option value="$PROJECT_DIR$/routes/web/projects.js" />
+        <option value="$PROJECT_DIR$/models/common.js" />
+        <option value="$PROJECT_DIR$/public/js/lib/handlebarsHelpers.js" />
+        <option value="$PROJECT_DIR$/shared/templates/project.time_report.handlebars" />
+        <option value="$PROJECT_DIR$/public/js/lib/external/easytimer.js" />
+        <option value="$PROJECT_DIR$/routes/web/home.js" />
+        <option value="$PROJECT_DIR$/views/timereport.handlebars" />
+        <option value="$PROJECT_DIR$/views/object.borrow.handlebars" />
+        <option value="$PROJECT_DIR$/dbmodels/Account.js" />
+        <option value="$PROJECT_DIR$/views/home.handlebars" />
+        <option value="$PROJECT_DIR$/authentication/init.js" />
+        <option value="$PROJECT_DIR$/config.json" />
+        <option value="$PROJECT_DIR$/views/partials/main.head.handlebars" />
+        <option value="$PROJECT_DIR$/public/styles/css/styles.css" />
+        <option value="$PROJECT_DIR$/public/styles/less/variables.less" />
+        <option value="$PROJECT_DIR$/routes/routes.js" />
+        <option value="$PROJECT_DIR$/dbmodels/Routes.js" />
+        <option value="$PROJECT_DIR$/dbmodels/Rounds.js" />
+        <option value="$PROJECT_DIR$/routes/web/ajax/round.js" />
+        <option value="$PROJECT_DIR$/dbmodels/Round.js" />
+        <option value="$PROJECT_DIR$/dbmodels/Project.js" />
+        <option value="$PROJECT_DIR$/models/round.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/dbcontext.js" />
+        <option value="$PROJECT_DIR$/views/round.listing.handlebars" />
+        <option value="$PROJECT_DIR$/routes/web/round.js" />
+        <option value="$PROJECT_DIR$/views/partials/main.header.handlebars" />
+        <option value="$PROJECT_DIR$/views/round.edit.handlebars" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-111" />
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="1023" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Less</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AngularJS</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="dbmodels" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
+              <item name="less" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kolmarden" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kolmarden" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files (x86)\nodejs\node.exe" />
+    <property name="nodejs_interpreter_path" value="C:\Program Files (x86)\nodejs\node" />
+    <property name="nodejs.mocha.mocha_node_package_dir" value="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\node_modules\mocha" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="editor.config.accepted" value="true" />
+    <property name="jsx.switch.disabled" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/routes/web" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\authentication" />
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\routes\web\ajax" />
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\shared\templates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\shared\templates" />
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\models" />
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\views" />
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\public\styles\less" />
+      <recent name="C:\Users\Jacob\Documents\WebProjects\Work\BunkerCMS\public" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.app.js">
+    <configuration name="AngularApp" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/BunkerCMS/public/index.html" />
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui>bdd</ui>
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="bin/www" working-dir="$PROJECT_DIR$" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.AngularApp" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.app.js" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="731c1e0f-cd46-4ebc-b734-5069b7240443" name="Default" comment="" />
+      <created>1465986306183</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1465986306183</updated>
+      <workItem from="1465986307337" duration="9055000" />
+      <workItem from="1466064870476" duration="891000" />
+      <workItem from="1466065874495" duration="1000" />
+      <workItem from="1466065952327" duration="1000" />
+      <workItem from="1466065992780" duration="152000" />
+      <workItem from="1466066185069" duration="268000" />
+      <workItem from="1466066554772" duration="309000" />
+      <workItem from="1466072093232" duration="6716000" />
+      <workItem from="1466108098316" duration="718000" />
+      <workItem from="1466594913330" duration="7127000" />
+      <workItem from="1466765650421" duration="3739000" />
+      <workItem from="1467285321174" duration="6634000" />
+      <workItem from="1467803386209" duration="6710000" />
+      <workItem from="1467816771687" duration="602000" />
+      <workItem from="1472204014455" duration="154000" />
+      <workItem from="1474732485518" duration="598000" />
+      <workItem from="1474883591639" duration="3000" />
+      <workItem from="1475889208535" duration="1045000" />
+      <workItem from="1479694738614" duration="249000" />
+      <workItem from="1480018583260" duration="3569000" />
+      <workItem from="1480102813525" duration="5000" />
+      <workItem from="1480364530883" duration="12687000" />
+      <workItem from="1480464928143" duration="273000" />
+      <workItem from="1480465225838" duration="12991000" />
+      <workItem from="1481024715628" duration="5290000" />
+      <workItem from="1481719393550" duration="38003000" />
+      <workItem from="1481977815324" duration="19183000" />
+      <workItem from="1482073889925" duration="708000" />
+      <workItem from="1482266434912" duration="39318000" />
+      <workItem from="1482776730614" duration="33314000" />
+      <workItem from="1482952478620" duration="389000" />
+      <workItem from="1482953007716" duration="23435000" />
+      <workItem from="1484752862600" duration="93649000" />
+      <workItem from="1485175230426" duration="2361000" />
+      <workItem from="1490126710114" duration="15413000" />
+      <workItem from="1492609777732" duration="403000" />
+      <workItem from="1492721653229" duration="1087000" />
+      <workItem from="1507226740738" duration="534000" />
+      <workItem from="1507515707392" duration="8283000" />
+    </task>
+    <task id="LOCAL-00001" summary="set up .gitignore">
+      <created>1466078531925</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1466078531925</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add node_modules to .gitignore">
+      <created>1466078635015</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1466078635015</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added project files">
+      <created>1466078711332</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1466078711332</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed .gitignore location">
+      <created>1466595225744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1466595225744</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add database connection, implement basic endpoints for getting and adding people to db.">
+      <created>1466597653737</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1466597653737</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Implement basic endpoints for getting and creating projects.">
+      <created>1466600769486</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1466600769486</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Full CRUD implemented.">
+      <created>1467291139308</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1467291139308</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="355867000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="1023" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15178572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32614705" sideWeight="0.5010554" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32614705" sideWeight="0.49894458" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2819237" sideWeight="0.49894458" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23548922" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39966834" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946378" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set up .gitignore" />
+    <MESSAGE value="add node_modules to .gitignore" />
+    <MESSAGE value="Added project files" />
+    <MESSAGE value="Fixed .gitignore location" />
+    <MESSAGE value="Add database connection, implement basic endpoints for getting and adding people to db." />
+    <MESSAGE value="Implement basic endpoints for getting and creating projects." />
+    <MESSAGE value="Full CRUD implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="Full CRUD implemented." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="22" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/dbmodels/TimeReport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="8" column="3" lean-forward="false" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/templates/project.time_report.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="4" column="8" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/project.edit.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="252" column="57" lean-forward="false" selection-start-line="252" selection-start-column="57" selection-end-line="252" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lib/handlebarsHelpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="19" column="46" lean-forward="false" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/lib/external/easytimer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4748" lean-forward="false" selection-start-line="0" selection-start-column="4748" selection-end-line="0" selection-end-column="4748" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/person.listing.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/object.edit.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="6" column="44" lean-forward="false" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/object.borrow.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/timereport.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="5" column="44" lean-forward="false" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/ajax/people.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4078">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/ajax/objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/objects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" lean-forward="false" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/middleware.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/authentication/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="9" column="25" lean-forward="false" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layouts/main.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/main.head.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8073">
+          <caret line="1367" column="28" lean-forward="false" selection-start-line="1367" selection-start-column="28" selection-end-line="1367" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/less/theme.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/styles/less/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="21" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shared/templates/person.absence.edit.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="71" lean-forward="false" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/home.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="816">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/object.listing.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/ajax/timeReports.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="20" lean-forward="true" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/person.edit.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="92" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="92" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/ajax/projects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="15" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="263" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/ajax/round.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="18" lean-forward="false" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="12" column="24" lean-forward="false" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodels/Project.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodels/Account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodels/Object.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbmodels/Round.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/round.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dbcontext.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" lean-forward="true" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/people.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="79" lean-forward="true" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/project.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/projects.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="45" column="35" lean-forward="false" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+          <folding>
+            <element signature="e#1499#2058#0" expanded="false" />
+            <element signature="e#2176#2959#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web/round.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="43" column="56" lean-forward="false" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/npm-debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/partials/main.header.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/round.listing.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/round.edit.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="148" column="12" lean-forward="true" selection-start-line="148" selection-start-column="12" selection-end-line="148" selection-end-column="12" />
+          <folding>
+            <element signature="n#script#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#fieldset#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

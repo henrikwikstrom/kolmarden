@@ -1,0 +1,12 @@
+<!-- shared/templates/person.absence.listing.handlebars -->
+
+<tbody>
+{{#each this}}
+<tr data-objectid="{{_id}}" data-object="{{jsonStringify this}}">
+    <!--<th scope="row">{{tableIndex @index}}</th>-->
+    <td>{{cause}}</td>
+    <td>{{start}} {{#if end}}&#8211;{{/if}} {{end}}</td>
+
+</tr>
+{{/each}}
+</tbody>

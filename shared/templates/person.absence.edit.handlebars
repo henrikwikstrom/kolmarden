@@ -1,0 +1,17 @@
+<!-- shared/templates/person.absence.edit.handlebars -->
+
+{{#if _id}}<input type="text" name="_id" value="{{_id}}" hidden>{{/if}}
+
+<label for="absence_cause" class="control-label" >Anledning:</label>
+<input id="absencec_cause" class="form-control" type="text" name="cause" placeholder="Anledning" value="{{cause}}">
+
+<label for="absence_start" class="control-label">Startdatum:</label>
+<input id="absence_start" class="form-control" type="date" name="start" placeholder="Startdatum" value="{{start}}">
+
+<label for="absence_end" class="control-label">Slutdatum:</label>
+<input id="absence_end" class="form-control" type="date" name="end" placeholder="Slutdatum" value="{{end}}">
+
+<div class="pull-right spacing">
+    {{#if _id}}<input class="btn btn-danger btn-hideable btn-space" type="button" value="Ta bort"/>{{/if}}
+    <input class="btn btn-info btn-hideable" type="button" value="Spara"/>
+</div>
